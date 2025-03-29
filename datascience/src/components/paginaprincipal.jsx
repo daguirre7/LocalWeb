@@ -84,7 +84,7 @@ export default function PaginaPrincipal() {
       </div>
 
       <footer>
-        <p>© 2025 Data Science Riesgos</p>
+        <p> 2025 Data Science Riesgos</p>
       </footer>
     </div>
   );

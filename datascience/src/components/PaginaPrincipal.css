@@ -47,6 +47,9 @@ header {
     gap: 20px;
     margin: 0;
     padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .menu-horizontal li {

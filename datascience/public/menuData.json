@@ -3,50 +3,62 @@
     "name": "Honduras",
     "icon": "fa-flag",
     "sub": [
-      { "name": "Riesgo de Credito", 
+      { "name": "Gestión Integral de Riesgo", 
       "children": [
         {
           "name": "Cartera Crediticia",
           "url": "http://l-65j1b2ol/PBIReports/powerbi/Comisiones_Regional"
         },
         {
-          "name": "Indicadores de Mora",
-          "url": "http://servidor/reportserver?/reportes/honduras/riesgo/mora"
+          "name": "Arrendamientos Financieros",
+          "url": "http://l-65j1b2ol/PBIReports/powerbi/Arrendamientos%20Financieros%20_V3"
         }
       ]       
       },
-      { "name": "San Pedro Sula", "url": "https://ejemplo.com/honduras/sps" }
+      { "name": "Riesgos No Financieros", 
+      "children":[
+        {
+          "name":"D1",
+          "url":"https:www.google.com"
+        },
+        {
+          "name":"D2",
+          "url":"https:www.google.com"
+        }
+      ]
+      },
+      { "name": "Riesgos Financieros", "url": "https:www.google.com" }
     ]
   },
   {
     "name": "Guatemala",
     "icon": "fa-flag",
     "sub": [
-      { "name": "Ciudad de Guatemala", "url": "https://ejemplo.com/guatemala/capital" },
-      { "name": "Quetzaltenango", "url": "https://ejemplo.com/guatemala/xela" }
+      { "name": "Gestión Integral de Riesgo", "url": "https:www.google.com" },
+      { "name": "Menu2", "url": "https:www.google.com" }
     ]
   },
   {
     "name": "Panamá",
     "icon": "fa-flag",
     "sub": [
-      { "name": "Ciudad de Panamá", "url": "https://ejemplo.com/panama/capital" },
-      { "name": "Colón", "url": "https://ejemplo.com/panama/colon" }
+      { "name": "Gestión Integral de Riesgo", "url": "https:www.google.com" },
+      { "name": "Menu2", "url": "https:www.google.com" }
     ]
   },
   {
     "name": "Nicaragua",
     "icon": "fa-flag",
     "sub": [
-      { "name": "Managua", 
+      { "name": "Menu1", 
         "children":[
             {
                 "name": "Cartera Crediticia",
-                "url": "http://l-65j1b2ol/PBIReports/powerbi/Comisiones_Regional"
+                "url": "https:www.google.com"
               }
         ]
     },
-      { "name": "León", "url": "https://ejemplo.com/nicaragua/leon" }
+      { "name": "Menu 2", "url": "https:www.google.com" }
     ]
   }
 ]
