@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Honduras",
+    "icon": "fa-flag",
+    "sub": [
+      { "name": "Riesgo de Credito", 
+      "children": [
+        {
+          "name": "Cartera Crediticia",
+          "url": "http://l-65j1b2ol/PBIReports/powerbi/Comisiones_Regional"
+        },
+        {
+          "name": "Indicadores de Mora",
+          "url": "http://servidor/reportserver?/reportes/honduras/riesgo/mora"
+        }
+      ]       
+      },
+      { "name": "San Pedro Sula", "url": "https://ejemplo.com/honduras/sps" }
+    ]
+  },
+  {
+    "name": "Guatemala",
+    "icon": "fa-flag",
+    "sub": [
+      { "name": "Ciudad de Guatemala", "url": "https://ejemplo.com/guatemala/capital" },
+      { "name": "Quetzaltenango", "url": "https://ejemplo.com/guatemala/xela" }
+    ]
+  },
+  {
+    "name": "Panamá",
+    "icon": "fa-flag",
+    "sub": [
+      { "name": "Ciudad de Panamá", "url": "https://ejemplo.com/panama/capital" },
+      { "name": "Colón", "url": "https://ejemplo.com/panama/colon" }
+    ]
+  },
+  {
+    "name": "Nicaragua",
+    "icon": "fa-flag",
+    "sub": [
+      { "name": "Managua", 
+        "children":[
+            {
+                "name": "Cartera Crediticia",
+                "url": "http://l-65j1b2ol/PBIReports/powerbi/Comisiones_Regional"
+              }
+        ]
+    },
+      { "name": "León", "url": "https://ejemplo.com/nicaragua/leon" }
+    ]
+  }
+]
