@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ficowaze/static/css/main.d048332a.chunk.css",
+    "main.js": "/ficowaze/static/js/main.761650bf.chunk.js",
+    "main.js.map": "/ficowaze/static/js/main.761650bf.chunk.js.map",
+    "runtime~main.js": "/ficowaze/static/js/runtime~main.cb89a7ff.js",
+    "runtime~main.js.map": "/ficowaze/static/js/runtime~main.cb89a7ff.js.map",
+    "static/js/2.fbb55ca6.chunk.js": "/ficowaze/static/js/2.fbb55ca6.chunk.js",
+    "static/js/2.fbb55ca6.chunk.js.map": "/ficowaze/static/js/2.fbb55ca6.chunk.js.map",
+    "static/js/3.177faaa1.chunk.js": "/ficowaze/static/js/3.177faaa1.chunk.js",
+    "static/js/3.177faaa1.chunk.js.map": "/ficowaze/static/js/3.177faaa1.chunk.js.map",
+    "index.html": "/ficowaze/index.html",
+    "precache-manifest.8d09ca3d7a5f5bd673a653406199cacb.js": "/ficowaze/precache-manifest.8d09ca3d7a5f5bd673a653406199cacb.js",
+    "service-worker.js": "/ficowaze/service-worker.js",
+    "static/css/main.d048332a.chunk.css.map": "/ficowaze/static/css/main.d048332a.chunk.css.map"
+  }
+}

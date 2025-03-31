@@ -29,7 +29,7 @@ export default function PaginaPrincipal() {
   const renderSubMenu = (items) => {
     return (
       <ul className="submenu-vertical">
-        {items.map((item, index) => (
+        {items.map((item, index ) => (
           <li key={index} className={item.children ? 'sub-dropdown' : ''}>
             {item.children ? (
               <>
@@ -66,7 +66,15 @@ export default function PaginaPrincipal() {
             {menuItems.map((item, index) => (
               <li key={index} className="dropdown">
                 <button className="dropdown-btn">
-                  {item.name} <i className="fas fa-caret-down"></i>
+                  {item.icon &&(
+                    <img 
+                      src={process.env.PUBLIC_URL + item.icon}
+                      alt={item.name}
+                      className="menu-icon"
+                    />
+                  )}
+                  {item.name} 
+                  <i className="fas fa-caret-down"></i>
                 </button>
                 <ul className="submenu-horizontal">
                   {item.sub.map((subItem, subIndex) => (
