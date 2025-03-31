@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PaginaPrincipal.css';
 
-
 export default function PaginaPrincipal() {
   const [menuItems, setMenuItems] = useState([]);
   const [selectedURL, setSelectedURL] = useState(null);
@@ -26,12 +25,36 @@ export default function PaginaPrincipal() {
     window.location.href = '/ficowaze';
   };
 
+  // Función recursiva para renderizar submenús anidados
+  const renderSubMenu = (items) => {
+    return (
+      <ul className="submenu-vertical">
+        {items.map((item, index) => (
+          <li key={index} className={item.children ? 'sub-dropdown' : ''}>
+            {item.children ? (
+              <>
+                <button className="dropdown-btn">
+                  {item.name} <i className="fas fa-caret-right"></i>
+                </button>
+                {renderSubMenu(item.children)}
+              </>
+            ) : (
+              <button onClick={() => handleSelection(item.name, item.url)}>
+                {item.name}
+              </button>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <div className="pagina-principal">
       <header>
         <div className="navbar">
           <div className="logo">
-          <img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="Home" className="home-icon-img" />
+            <img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="Home" className="home-icon-img" />
             <i className="fas fa-house"></i> FICOWAZE
           </div>
           <ul className="menu-horizontal">
@@ -53,17 +76,7 @@ export default function PaginaPrincipal() {
                           <button className="dropdown-btn">
                             {subItem.name} <i className="fas fa-caret-right"></i>
                           </button>
-                          <ul className="submenu-vertical">
-                            {subItem.children.map((child, cIndex) => (
-                              <li key={cIndex}>
-                                <button
-                                  onClick={() => handleSelection(child.name, child.url)}
-                                >
-                                  {child.name}
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
+                          {renderSubMenu(subItem.children)}
                         </>
                       ) : (
                         <button onClick={() => handleSelection(subItem.name, subItem.url)}>
@@ -98,5 +111,5 @@ export default function PaginaPrincipal() {
         <p>2025 Data Science Riesgos</p>
       </footer>
     </div>
-  );
+  )
 }

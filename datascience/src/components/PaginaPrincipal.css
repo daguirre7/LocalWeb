@@ -103,7 +103,7 @@ main {
 }
   
 .sub-dropdown:hover .submenu-vertical {
-    display: block;
+    display: none;
 }
   
 .submenu-vertical {
@@ -129,10 +129,10 @@ main {
     background: none;
     border: none;
     color: #003865;
-    width: 100%;
+    width:  100%;
     text-align: left;
     padding: 8px 15px;
-    font-size: 0.9rem;
+    font-size: 12px;
     cursor: pointer;
 }
   
