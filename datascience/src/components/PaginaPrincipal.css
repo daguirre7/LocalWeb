@@ -13,35 +13,35 @@ header {
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .navbar {
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .logo {
+.logo {
     font-size: 1.1rem;
     font-weight: bold;
-  }
+}
   
-  /* === CONTENIDO BAJO EL HEADER === */
-  .container {
+/* === CONTENIDO BAJO EL HEADER === */
+.container {
     margin-top: 48px; /* misma altura que el header */
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 48px);
-  }
+}
   
-  main {
+main {
     flex: 1;
     padding: 1rem;
-  }
+}
   
-  /* === MENÚ HORIZONTAL PRINCIPAL === */
-  .menu-horizontal {
+/* === MENÚ HORIZONTAL PRINCIPAL === */
+.menu-horizontal {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -50,13 +50,13 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
   
-  .menu-horizontal li {
+.menu-horizontal li {
     position: relative;
-  }
+}
   
-  .dropdown-btn {
+.dropdown-btn {
     background: none;
     border: none;
     color: white;
@@ -64,14 +64,19 @@ header {
     font-weight: 500;
     font-size: 0.95rem;
     padding: 10px;
-  }
+}
+
+.dropdown-btn i {
+    margin-left: 6px;
+    font-size: 0.75rem;
+}
   
-  .dropdown-btn:hover {
+.dropdown-btn:hover {
     text-decoration: underline;
-  }
+}
   
-  /* === SUBMENÚ NIVEL 1 (horizontal desplegable) === */
-  .submenu-horizontal {
+/* === SUBMENÚ NIVEL 1 (horizontal desplegable) === */
+.submenu-horizontal {
     display: none;
     position: absolute;
     top: 100%;
@@ -86,22 +91,22 @@ header {
     z-index: 1001;
     min-width: 180px;
     border-radius: 4px;
-  }
+}
   
-  .menu-horizontal li:hover .submenu-horizontal {
+.menu-horizontal li:hover .submenu-horizontal {
     display: block;
-  }
+}
   
-  /* === SUBMENÚ NIVEL 2 (hijos verticales, flyout) === */
-  .sub-dropdown {
+/* === SUBMENÚ NIVEL 2 (hijos verticales, flyout) === */
+.sub-dropdown {
     position: relative;
-  }
+}
   
-  .sub-dropdown:hover .submenu-vertical {
+.sub-dropdown:hover .submenu-vertical {
     display: block;
-  }
+}
   
-  .submenu-vertical {
+.submenu-vertical {
     display: none;
     position: absolute;
     top: 0;
@@ -116,11 +121,11 @@ header {
     min-width: 180px;
     z-index: 1002;
     border-radius: 4px;
-  }
+}
   
-  /* BOTONES DENTRO DE LOS SUBMENÚS */
-  .submenu-horizontal button,
-  .submenu-vertical button {
+/* BOTONES DENTRO DE LOS SUBMENÚS */
+.submenu-horizontal button,
+.submenu-vertical button {
     background: none;
     border: none;
     color: #003865;
@@ -129,30 +134,51 @@ header {
     padding: 8px 15px;
     font-size: 0.9rem;
     cursor: pointer;
-  }
+}
   
-  .submenu-horizontal button:hover,
-  .submenu-vertical button:hover {
+.submenu-horizontal button:hover,
+.submenu-vertical button:hover {
     background-color: #e6f1f8;
     color: #0076BE;
     font-weight: 500;
-  }
+}
   
-  /* === FOOTER === */
-  footer {
+.sub-dropdown:hover > .submenu-vertical {
+    display: block;
+}
+
+/* === FOOTER === */
+footer {
     background-color: #f0f0f0;
     text-align: center;
     padding: 10px;
     font-size: 0.85rem;
     color: #555;
     border-top: 1px solid #ddd;
-  }
+}
   
-  /* === RESPONSIVE: invertir submenús si hay poco espacio === */
-  @media (max-width: 100%) {
+/* ÍCONO HOME */
+.home-icon-button {
+    background: none;
+    border: white;
+    cursor: pointer;
+    padding: 4px;
+}
+  
+.home-icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+  
+.home-icon-img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+/* === RESPONSIVE: invertir submenús si hay poco espacio === */
+@media (max-width: 100%) {
     .submenu-vertical {
-      left: auto;
-      right: 160px;
+        left: auto;
+        right: 160px;
     }
-  }
-  
+}

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './PaginaPrincipal.css';
 
+
 export default function PaginaPrincipal() {
   const [menuItems, setMenuItems] = useState([]);
   const [selectedURL, setSelectedURL] = useState(null);
   const [selectedName, setSelectedName] = useState('Bienvenido');
 
   useEffect(() => {
-    fetch('/menuData.json')
+    fetch(`${process.env.PUBLIC_URL}/menuData.json`)
       .then(res => res.json())
       .then(data => setMenuItems(data))
       .catch(error => console.error('Error cargando el menú:', error));
@@ -21,14 +22,24 @@ export default function PaginaPrincipal() {
     setSelectedURL(finalUrl);
   };
 
+  const goHome = () => {
+    window.location.href = '/ficowaze';
+  };
+
   return (
     <div className="pagina-principal">
       <header>
         <div className="navbar">
           <div className="logo">
+          <img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="Home" className="home-icon-img" />
             <i className="fas fa-house"></i> FICOWAZE
           </div>
           <ul className="menu-horizontal">
+            <li>
+              <button onClick={goHome} className="home-icon-button">
+                <img src={`${process.env.PUBLIC_URL}/home.png`} alt="Home" className="home-icon-img" />
+              </button>
+            </li>
             {menuItems.map((item, index) => (
               <li key={index} className="dropdown">
                 <button className="dropdown-btn">
@@ -84,7 +95,7 @@ export default function PaginaPrincipal() {
       </div>
 
       <footer>
-        <p> 2025 Data Science Riesgos</p>
+        <p>2025 Data Science Riesgos</p>
       </footer>
     </div>
   );
