@@ -32,7 +32,7 @@
               },
               {
                 "name":"D2",
-                "url": "http://hnsvrblazeapp1:5853/ReportsDS/powerbi/Honduras/Riesgos%20Financieros/riesgos_financieros_honduras_banco"
+                "url": "https://www.google.com"
               }              
             ]
           },
@@ -88,11 +88,11 @@
     "icon": "/images/guatemala.png",    
     "sub": [
       {
-        "name": "Gestión Integral de Riesgo",
+        "name": "D1",
         "url": "https://www.google.com"
       },
       {
-        "name": "Menu2",
+        "name": "D2",
         "url": "https://www.google.com"
       }
     ]
@@ -135,7 +135,7 @@
     "icon": "/images/nicaragua.png",    
     "sub": [
       {
-        "name": "Menu1",
+        "name": "D1",
         "children": [
           {
             "name": "Cartera Crediticia",
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "name": "Menu 2",
+        "name": "D2",
         "url": "https://www.google.com"
       }
     ]
