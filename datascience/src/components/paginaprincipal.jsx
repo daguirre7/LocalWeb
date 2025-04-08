@@ -5,6 +5,7 @@ export default function PaginaPrincipal() {
   const [menuItems, setMenuItems] = useState([]);
   const [selectedURL, setSelectedURL] = useState(null);
   const [selectedName, setSelectedName] = useState('Bienvenido');
+  const [isMenuopen,setISMenuOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/menuData.json`)
@@ -49,6 +50,7 @@ export default function PaginaPrincipal() {
     );
   };
 
+  const toggleMenu=()=>setISMenuOpen(!isMenuopen);
   return (
     <div className="pagina-principal">
       <header>
@@ -57,11 +59,22 @@ export default function PaginaPrincipal() {
             <img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="Home" className="home-icon-img" />
             <i className="fas fa-house"></i> FICOWAZE
           </div>
-          <ul className="menu-horizontal">
-            <li>
-              <button onClick={goHome} className="home-icon-button">
+          <button onClick={goHome} className="home-icon-button">
                 <img src={`${process.env.PUBLIC_URL}/home.png`} alt="Home" className="home-icon-img" />
-              </button>
+          </button>          
+          <button onClick={toggleMenu} className="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
+      </header>
+      
+      <aside className={`sidebar ${isMenuopen ? 'open' : ''}`}>
+      <ul className="menu-horizontal">
+            <li>
+
             </li>
             {menuItems.map((item, index) => (
               <li key={index} className="dropdown">
@@ -97,9 +110,8 @@ export default function PaginaPrincipal() {
               </li>
             ))}
           </ul>
-        </div>
-      </header>
-
+      </aside>
+      
       <div className="container">
         <main>
           <h2>{selectedName}</h2>

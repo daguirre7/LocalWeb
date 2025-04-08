@@ -39,7 +39,30 @@ main {
     flex: 1;
     padding: 1rem;
 }
-  
+/*MMENU VERTICAL*/
+.menu-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+}  
+.menu-button span{
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.menu-button:hover span{
+    background-color: #3b82f6;
+    transform: scaleX(1.2);
+}
 /* === MENÚ HORIZONTAL PRINCIPAL === */
 .menu-horizontal {
     list-style: none;
