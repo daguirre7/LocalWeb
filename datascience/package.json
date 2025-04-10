@@ -2,7 +2,7 @@
   "name": "datascience",
   "version": "0.1.0",
   "_Comentario": "ruta raiz segun la ubicación en el server local",
-  "homepage": "http://server/ficowaze/",
+  "homepage": "http://servidor/ficowaze/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

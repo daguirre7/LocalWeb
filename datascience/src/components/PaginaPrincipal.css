@@ -74,6 +74,8 @@ header {
   padding: 10px;
   overflow-y: auto;
   transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+  flex-direction: column;
+  display: flex;
 }
 
 .sidebar:not(.open) {
@@ -95,6 +97,21 @@ header {
   margin-right: 5px;
   vertical-align: middle;
   object-fit: contain;
+}
+.sidebar-footer{
+  margin-top: auto;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid#cdc9c9;
+}
+.sidebar-logo-icon{
+  width: 70px;
+  filter: brightness(2);
+  transition: opacity 0.3s ease;
+}
+.footer-sidebar-name{
+  color: white;
+  font-size: xx-small;
 }
 
 .dropdown-btn {
@@ -266,3 +283,11 @@ footer {
   border-radius: 4px;
 }
 
+.parrafo1{
+  font-size:1.4cqmax;
+  margin-right: 25%;
+  margin-left: 10%;
+  text-align: justify;
+  border-left: 10px solid #85baff;
+  padding: 0 20px;
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import './PaginaPrincipal.css';
 
 export default function PaginaPrincipal() {
@@ -29,12 +29,25 @@ export default function PaginaPrincipal() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleSubMenu = (key) => {
+  const toggleSubMenu = (key,parentKey)=>{
+    setOpenMenus(prev =>{
+      const newState = Object.keys(prev).reduce((acc,k) => {
+        const isSibling = k.startsWith(parentKey) && k !== key && k.split('-').length=== key.split('-').length;
+        if (!isSibling) acc[k]=prev[k];
+        return acc;
+      },{});
+      return{
+        ...newState,
+        [key]: !prev[key]
+      };
+    });
+  };
+/*   const toggleSubMenu = (key) => {
     setOpenMenus(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
-  };
+  }; */
 
   const renderMenuItems = (items, parentKey = '') => {
     return (
@@ -46,7 +59,8 @@ export default function PaginaPrincipal() {
           if (item.children || item.sub) {
             return (
               <li key={currentKey} className={`sub-dropdown ${isOpen ? 'open' : ''}`}>
-                <button className="dropdown-btn" onClick={() => toggleSubMenu(currentKey)}>
+                <button className="dropdown-btn" onClick={() => toggleSubMenu(currentKey,parentKey)}>
+                {/* <button className="dropdown-btn" onClick={() => toggleSubMenu(currentKey)}> */}
                   {item.name} <i className="fas fa-caret-right"></i>
                 </button>
                 {isOpen && renderMenuItems(item.children || item.sub, currentKey)}
@@ -103,7 +117,8 @@ export default function PaginaPrincipal() {
 
               return (
                 <li key={key} className={`dropdown ${isOpen ? 'open' : ''}`}>
-                  <button className="dropdown-btn" onClick={() => toggleSubMenu(key)}>
+                  {/* <button className="dropdown-btn" onClick={() => toggleSubMenu(key)}> */}
+                  <button className="dropdown-btn" onClick={() => toggleSubMenu(key,'root')}>
                     {item.icon && (
                       <img
                         src={process.env.PUBLIC_URL + item.icon}
@@ -120,8 +135,15 @@ export default function PaginaPrincipal() {
               );
             })}
           </ul>
+          <div className="sidebar-footer">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/Ficohsa.png`}
+            alt="img"
+            className="sidebar-logo-icon"
+            />  
+            <p className="footer-sidebar-name">Data Science</p>        
+          </div>
         </aside>
-
         <main>
           {selectedURL ? (
             <iframe
@@ -132,7 +154,9 @@ export default function PaginaPrincipal() {
           ) : (
             <>
               <h2 className='main-title'>{selectedName}</h2>
-              <p>Selecciona un subsegmento para ver el contenido embebido.</p>
+              <p className="parrafo1">FicoWaze nace con la visión de convertirse en el repositorio único de tableros de Power BI para la toma de decisiones en materia de riesgos, facilitando la trazabilidad, el análisis comparativo entre bancas, y promoviendo una cultura de datos accesibles y útil para todos los equipos de riesgo.
+
+              </p>
               <p>...</p>
             </>
           )
