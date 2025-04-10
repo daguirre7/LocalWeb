@@ -123,15 +123,15 @@ export default function PaginaPrincipal() {
         </aside>
 
         <main>
-          <h2 className='main-title'>{selectedName}</h2>
           {selectedURL ? (
             <iframe
-              src={selectedURL}
+              src={`${selectedURL}${selectedURL.includes('?') ? '&' : '?'}rs:Embed=true`}
               title={selectedName}
               style={{ width: '100%', height: '92vh', border: 'none' }}
             />
           ) : (
             <>
+              <h2 className='main-title'>{selectedName}</h2>
               <p>Selecciona un subsegmento para ver el contenido embebido.</p>
               <p>...</p>
             </>

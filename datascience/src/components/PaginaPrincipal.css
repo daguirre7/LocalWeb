@@ -86,6 +86,7 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
 }
 
 .menu-icon {
@@ -102,9 +103,9 @@ header {
   color: white;
   cursor: pointer;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.80rem;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   width: 100%;
   margin-top: 1px;
   margin-bottom: 1px;
@@ -129,6 +130,7 @@ header {
   padding-left: 15px;
   margin: 2px 0;
   border-left: 2px solid #cccccc47;
+  font-size: 12px;
 }
 
 .submenu-vertical li {
@@ -144,7 +146,7 @@ header {
   text-align: left;
   font-size: 0.9rem;
   color: white;
-  font-size: 90%;
+  font-size: 12px;
 }
 
 .submenu-vertical button:hover {
