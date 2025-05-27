@@ -87,7 +87,7 @@ export default function PaginaPrincipal() {
       <header>
         <div className="navbar">
           <div className="logo">
-            <img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="Home" className="home-icon-img" />
+            <img src={`${process.env.PUBLIC_URL}/IconoFicohsaNav.png`} alt="Home" className="home-icon-img" />
             
           </div>
           <div className="navbar-name">
@@ -149,7 +149,7 @@ export default function PaginaPrincipal() {
             <iframe
               src={`${selectedURL}${selectedURL.includes('?') ? '&' : '?'}rs:Embed=true`}
               title={selectedName}
-              style={{ width: '100%', height: '92vh', border: 'none' }}
+              style={{ width: '100%', height: '100%', border: 'none' }}
             />
           ) : (
             <>
@@ -157,7 +157,13 @@ export default function PaginaPrincipal() {
               <p className="parrafo1">FicoWaze nace con la visión de convertirse en el repositorio único de tableros de Power BI para la toma de decisiones en materia de riesgos, facilitando la trazabilidad, el análisis comparativo entre bancas, y promoviendo una cultura de datos accesibles y útil para todos los equipos de riesgo.
 
               </p>
-              <p>...</p>
+              <p></p>
+                <div className="div-imagen-fondo">
+                  <img src={`${process.env.PUBLIC_URL}/fondo.jpg`}
+                  alt="Fondo" 
+                  className="imagen-fondo"
+                  />
+                </div>
             </>
           )
           }

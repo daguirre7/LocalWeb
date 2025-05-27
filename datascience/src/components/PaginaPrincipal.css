@@ -20,7 +20,7 @@ body, .pagina-principal {
 
 /* === HEADER FIJO === */
 header {
-  background-color: #003865;
+  background-color: #005499;
   color: white;
   padding: 0 20px;
   height: 48px;
@@ -47,6 +47,9 @@ header {
   display: flex;
   justify-content: left;
   margin-left: 20px;  
+  color: white;
+  font-family: sans-serif;
+  font-size: 120%;
 }
 .navbar-center {
   flex: 1;
@@ -56,8 +59,9 @@ header {
 }
 
 .logo {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  filter: brightness(2);
 }
 
 /* === CONTENIDO BAJO EL HEADER === */
@@ -221,7 +225,7 @@ main {
 }
 
 .menu-button:hover span {
-  background-color: #3b83f6;
+  background-color: #42c4dc;
   transform: scaleX(1.2);
 }
 
@@ -285,9 +289,21 @@ footer {
 
 .parrafo1{
   font-size:1.4cqmax;
-  margin-right: 25%;
+  margin-right: 10%;
   margin-left: 10%;
   text-align: justify;
   border-left: 10px solid #85baff;
   padding: 0 20px;
+}
+
+.div-imagen-fondo{
+    display: flex;
+  justify-content: center;
+}
+.imagen-fondo{
+  margin: 5%;
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  position: absolute;
 }
