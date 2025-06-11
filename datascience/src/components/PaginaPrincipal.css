@@ -7,6 +7,7 @@
 
 body, .pagina-principal {
   font-family: 'Roboto', sans-serif;
+  background-color: #85BAFF;
 }
 
 .main-title {
@@ -14,7 +15,7 @@ body, .pagina-principal {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 0rem;
-  color: #003865; /* o el color que prefieras */
+  color: #003865; /*  */
 }
 
 
@@ -41,7 +42,8 @@ header {
   margin-left: 10px;
   justify-content: left;
   align-items: center;
-  border-bottom: 3px solid #D9E9FF; 
+  border-bottom: 4px solid #85BAFF; 
+  border-bottom-right-radius: 3000px 100px;
 }
 .navbar-name{
   display: flex;
@@ -107,17 +109,39 @@ header {
   text-align: center;
   padding: 10px 0;
   border-top: 1px solid#cdc9c9;
+
 }
 .sidebar-logo-icon{
   width: 70px;
-  filter: brightness(2);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(183deg) brightness(110%) contrast(100%);
+  mix-blend-mode:lighten;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   transition: opacity 0.3s ease;
+  overflow-y: auto;
 }
 .footer-sidebar-name{
   color: white;
   font-size: xx-small;
 }
-
+.enlace-tablero{
+  background: none;
+  border: none;
+  overflow-y: auto;
+  color: white;
+  text-align: center;
+  font-size: 0.80rem;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.enlace-tablero:hover{
+  background-color: rgba(255, 255, 255, 0.719);
+  border-color: #005cac80;
+  color: #005bac;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .dropdown-btn {
   background: none;
   border: none;
@@ -298,8 +322,16 @@ footer {
 
 .div-imagen-fondo{
     display: flex;
-  justify-content: center;
+    justify-content: center;
+    mix-blend-mode: multiply;
+    filter: brightness(1);
+    box-shadow:0px 15px 10px rgba(0, 0, 0, 0.895);
 }
+.div-imagen-fondo:hover{
+  transform: scale(1.05);
+
+}
+
 .imagen-fondo{
   margin: 5%;
   width: 40%;

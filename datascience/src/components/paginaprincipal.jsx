@@ -4,7 +4,7 @@ import './PaginaPrincipal.css';
 export default function PaginaPrincipal() {
   const [menuItems, setMenuItems] = useState([]);
   const [selectedURL, setSelectedURL] = useState(null);
-  const [selectedName, setSelectedName] = useState('FicoWaze');
+  const [selectedName, setSelectedName] = useState('FicoInsight');
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [openMenus, setOpenMenus] = useState({});
 
@@ -24,7 +24,7 @@ export default function PaginaPrincipal() {
     /*setIsMenuOpen(false)*/; //cierra el menu al hacer click
   };
   const goHome = () => {
-    window.location.href = '/ficowaze';
+    window.location.href = '/ficoinsight';
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -42,12 +42,6 @@ export default function PaginaPrincipal() {
       };
     });
   };
-/*   const toggleSubMenu = (key) => {
-    setOpenMenus(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
-  }; */
 
   const renderMenuItems = (items, parentKey = '') => {
     return (
@@ -84,14 +78,14 @@ export default function PaginaPrincipal() {
 
   return (
     <div className="pagina-principal">
-      <header>
+      <header >
         <div className="navbar">
           <div className="logo">
             <img src={`${process.env.PUBLIC_URL}/IconoFicohsaNav.png`} alt="Home" className="home-icon-img" />
             
           </div>
           <div className="navbar-name">
-            <i className="fas fa-house"></i> FICOWAZE
+            <i className="fas fa-house"></i> FICOINSIGHT
           </div>
           <div className="navbar-center">
             <button onClick={goHome} className="home-icon-button">
@@ -135,18 +129,22 @@ export default function PaginaPrincipal() {
               );
             })}
           </ul>
-          <div className="sidebar-footer">
+          <div className="sidebar-footer">        
           <img
-            src={`${process.env.PUBLIC_URL}/images/Ficohsa.png`}
+            src={`${process.env.PUBLIC_URL}/images/p_logoDS1.png`}
             alt="img"
             className="sidebar-logo-icon"
             />  
-            <p className="footer-sidebar-name">Data Science</p>        
+            <button className="enlace-tablero"
+              onClick={()=>handleSelection("Estadisticas Server","http://hnsvrblazeapp1:5853/ReportsDS/powerbi/Honduras/Consultas%20a%20Tableros%20PBIRS")}>
+              Estadisticas
+            </button>
+            <p className="footer-sidebar-name">__</p>        
           </div>
         </aside>
-        <main>
+        <main >
           {selectedURL ? (
-            <iframe
+            <iframe 
               src={`${selectedURL}${selectedURL.includes('?') ? '&' : '?'}rs:Embed=true`}
               title={selectedName}
               style={{ width: '100%', height: '100%', border: 'none' }}
@@ -154,12 +152,12 @@ export default function PaginaPrincipal() {
           ) : (
             <>
               <h2 className='main-title'>{selectedName}</h2>
-              <p className="parrafo1">FicoWaze nace con la visión de convertirse en el repositorio único de tableros de Power BI para la toma de decisiones en materia de riesgos, facilitando la trazabilidad, el análisis comparativo entre bancas, y promoviendo una cultura de datos accesibles y útil para todos los equipos de riesgo.
+              <p className="parrafo1">FicoInsight nace con la visión de convertirse en el repositorio único de tableros de Power BI para la toma de decisiones en materia de riesgos, facilitando la trazabilidad, el análisis comparativo entre bancas, y promoviendo una cultura de datos accesibles y útil para todos los equipos de riesgo.
 
               </p>
               <p></p>
                 <div className="div-imagen-fondo">
-                  <img src={`${process.env.PUBLIC_URL}/fondo.jpg`}
+                  <img src={`${process.env.PUBLIC_URL}/logo_ficoinsight.png`}
                   alt="Fondo" 
                   className="imagen-fondo"
                   />
