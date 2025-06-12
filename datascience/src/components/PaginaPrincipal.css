@@ -21,7 +21,7 @@ body, .pagina-principal {
 
 /* === HEADER FIJO === */
 header {
-  background-color: #005499;
+  background-color: #0058cb;
   color: white;
   padding: 0 20px;
   height: 48px;
@@ -163,10 +163,11 @@ header {
 }
 /*Menu Segmento 1*/
 .dropdown-btn:hover {
-  background-color: #ffd9dc3f;
   color: white;
   font-weight: bold;
   margin-top: 1px;
+  width: 100%;
+  background:linear-gradient(to left,#ffd9dc3f,#85BAFF);
 }
 
 /* === SUBMENÚS === */
@@ -211,6 +212,7 @@ header {
 .sub-dropdown.open > .dropdown-btn::after {
   transform: rotate(90deg);
   content: "🞂";
+  color: white;
 }
 
 .sub-dropdown.open > .submenu-vertical {
