@@ -82,7 +82,6 @@ export default function PaginaPrincipal() {
         <div className="navbar">
           <div className="logo">
             <img src={`${process.env.PUBLIC_URL}/IconoFicohsaNav.png`} alt="Home" className="home-icon-img" />
-            
           </div>
           <div className="navbar-name">
             <i className="fas fa-house"></i> FICOINSIGHT
@@ -137,18 +136,20 @@ export default function PaginaPrincipal() {
             />  
             <button className="enlace-tablero"
               onClick={()=>handleSelection("Estadisticas Server","http://hnsvrblazeapp1:5853/ReportsDS/powerbi/Honduras/Consultas%20a%20Tableros%20PBIRS")}>
-              Estadisticas
+              Visitas a FicoInsight
             </button>
             <p className="footer-sidebar-name">__</p>        
           </div>
         </aside>
         <main >
           {selectedURL ? (
+            <>
             <iframe 
               src={`${selectedURL}${selectedURL.includes('?') ? '&' : '?'}rs:Embed=true`}
               title={selectedName}
-              style={{ width: '100%', height: '100%', border: 'none' }}
+              style={{ width: '100%', height: '100%', border: 'none'}}
             />
+            </>
           ) : (
             <>
               <h2 className='main-title'>{selectedName}</h2>

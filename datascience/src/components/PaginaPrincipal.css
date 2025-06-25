@@ -314,10 +314,11 @@ footer {
 }
 
 .parrafo1{
-  font-size:1.4cqmax;
+  font-size:1.6cqmax;
   margin-right: 10%;
   margin-left: 10%;
   text-align: justify;
+  font-family: Outfit, sans-serif;
   border-left: 10px solid #85baff;
   padding: 0 20px;
 }
